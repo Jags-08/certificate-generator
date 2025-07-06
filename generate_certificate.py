@@ -17,8 +17,8 @@ def generate():
     draw = ImageDraw.Draw(image)
 
     try:
-        font_name = ImageFont.truetype("arial.ttf", 60)
-        font_year = ImageFont.truetype("arial.ttf", 32)
+        font_name = ImageFont.truetype("LibreBaskerville-Regular.ttf", 150)
+        font_year = ImageFont.truetype("OpenSans_Condensed-LightItalic.ttf", 70)
     except:
         font_name = ImageFont.load_default()
         font_year = ImageFont.load_default()
