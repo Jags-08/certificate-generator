@@ -17,13 +17,13 @@ def generate():
     draw = ImageDraw.Draw(image)
 
     try:
-        font_name = ImageFont.truetype("LibreBaskerville-Regular.ttf", 70)
-        font_year = ImageFont.truetype("OpenSans_Condensed-LightItalic.ttf", 20)
+        font_name = ImageFont.truetype("LibreBaskerville-Regular.ttf", 100)
+        font_year = ImageFont.truetype("OpenSans_Condensed-LightItalic.ttf", 40)
     except:
         font_name = ImageFont.load_default()
         font_year = ImageFont.load_default()
 
-    draw.text((image.width//2, 1120), name, fill="black", font=font_name, anchor="mm")
+    draw.text((image.width//2, 1120), name, fill="black", font=font_name.upper(), anchor="mm")
     sentence = f"for successfully completing the academic year {year} at Global English School"
     draw.text((image.width//2, 1235), sentence, fill="black", font=font_year, anchor="mm")
 
