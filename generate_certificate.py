@@ -10,7 +10,7 @@ def form():
 
 @app.route('/generate', methods=['POST'])
 def generate():
-    name = request.form['name']
+    name = request.form['name'].upper()
     year = request.form['year']
 
     image = Image.open("certificate_template.png")
@@ -23,7 +23,7 @@ def generate():
         font_name = ImageFont.load_default()
         font_year = ImageFont.load_default()
 
-    draw.text((image.width//2, 1120), name, fill="black", font=font_name.upper(), anchor="mm")
+    draw.text((image.width//2, 1120), name, fill="black", font=font_name, anchor="mm")
     sentence = f"for successfully completing the academic year {year} at Global English School"
     draw.text((image.width//2, 1235), sentence, fill="black", font=font_year, anchor="mm")
 
