@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Certificate Generator</title>
   <style>
     body {
@@ -43,29 +42,20 @@
       border-radius: 6px;
       font-size: 16px;
       cursor: pointer;
-      transition: background-color 0.3s;
     }
     button:hover {
       background-color: #004d99;
-    }
-    .footer {
-      margin-top: 20px;
-      font-size: 13px;
-      color: #777;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h2>Certificate Generator</h2>
-    <form action="https://your-flask-api-url.onrender.com/generate" method="post">
+    <form action="/generate" method="post">
       <input type="text" name="name" placeholder="Enter Full Name" required />
       <input type="text" name="year" placeholder="Academic Year (e.g. 2024-25)" required />
       <button type="submit">Generate PDF</button>
     </form>
-    <div class="footer">
-      Powered by Global English School
-    </div>
   </div>
 </body>
 </html>
